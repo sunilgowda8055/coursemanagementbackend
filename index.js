@@ -11,17 +11,7 @@ app.use(morgan('tiny'))
 app.use(express.json())
 app.use('/api', router)
 
-// to check it is working upto23rd line and added to router
 
-// app.get('/', async (req, res) => {
-//   try {
-//     return res.status(201).send({ message: 'hello from backend' })
-//   } catch (error) {
-//     return res.status(400).send({
-//       error: 'Error Happened in Backend',
-//     })
-//   }
-// })
 
 connectDatabase().then(() => {
   app.listen(8080, () => console.log('server Listen on http://localhost:8080'))

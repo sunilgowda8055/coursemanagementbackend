@@ -1,4 +1,3 @@
-const mongodb=require("mongoose");// import mongodb through require.
 const dotenv=require("dotenv");// import dotenv.
 const { default: mongoose } = require("mongoose");
 dotenv.config(); // after import dotenv we did config that.
