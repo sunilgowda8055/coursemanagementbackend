@@ -1,8 +1,6 @@
 const instructorModel = require('../models/instructorUserModel')
 
-
-
-//  this fnction is responsible to store the instructor signup data into database
+//  this fnction is responsibz
 async function instructorSignupService(fullname, email, password) {
   try {
     const alreadyExisting = await instructorModel.findOne({ email }).lean()
