@@ -1,4 +1,5 @@
 const { instructorSignupService } = require('../services/instructorService')
+const { studentSignupService } = require('../services/studentService')
 
 const instructorSignup = async (req, res) => {
   try {
@@ -16,9 +17,9 @@ const instructorSignup = async (req, res) => {
 const studentSignup = async (req, res) => {
   try {
     const { fullName, email, password } = req.body
-    const data = await instructorSignupService(fullName, email, password)
+    const data = await studentSignupService(fullName, email, password)
     return res.status(201).send({
-      message: 'Instructor Signup Successful',
+      message: 'Student Signup Successful',
       data: data,
     })
   } catch (error) {
@@ -26,4 +27,4 @@ const studentSignup = async (req, res) => {
   }
 }
 
-module.exports = { instructorSignup }
+module.exports = { instructorSignup,studentSignup }
