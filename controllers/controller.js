@@ -19,6 +19,8 @@ const instructorSignup = async (req, res) => {
   }
 }
 
+// SS
+
 const studentSignup = async (req, res) => {
   try {
     const { fullName, email, password } = req.body
